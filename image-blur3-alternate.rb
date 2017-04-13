@@ -28,7 +28,7 @@ class Image
       end
     
       # If the image needs to be blurred by more than 1 unit, 
-      # this will use recursion until all elements within the given distance are blurred.
+      # this will continue to use the method blur until all elements within the given distance are a 1.
      if distance > 1
        Image.new(blur).blur(distance-1)
      else

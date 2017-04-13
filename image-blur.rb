@@ -12,7 +12,7 @@ class Image
     # Creates a new two-dimensional array that is the same dimensions as @array where each element is a 0.
     blur = Array.new(@array.length) {Array.new(@array[0].length, 0)}
 
-    # Iterates through each element of the array, and when a 1 is found, it changes the nearby values of blur to equal 1 as well.
+    # Iterates through each element of the array, and when a 1 is found, it changes the adjacent values of blur to equal 1 as well.
     @array.each.with_index do |row, j|
       row.each.with_index do |pixel, i|
         if pixel == 1
